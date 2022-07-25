@@ -1,3 +1,113 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.arrow__style {
+  cursor: pointer;
+  background: transparent;
+}
+
+.shell {
+  background: linear-gradient(rgba(0, 0, 0, 0.03), 72%, transparent 0);
+  background-color: transparent;
+  background-size: 160px 100px;
+  background-repeat: repeat;
+  padding-top: 6.1px;
+}
+@media only screen and (max-width: 1024px) {
+  .shell {
+    display: none;
+  }
+}
+
+.main__bg {
+  position: absolute;
+  width: 718px;
+  height: 100vh;
+
+  background-image: url('/assets/mainbg.png');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  right: 78px;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 1330px) {
+  .main__bg {
+    background-image: url('/assets/mainbgmobile.png');
+    right: 0;
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    background-size: contain;
+  }
+}
+
+.button__bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('/assets/buttonbg.png');
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-position-x: right;
+  right: 0;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 1060px) {
+  .button__bg {
+    background-image: url('/assets/buttonbgmobile.png');
+    right: 0;
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    background-size: contain;
+  }
+}
+
+@media only screen and (max-height: 720px) {
+  .idea__header {
+    padding-top: unset !important;
+  }
+
+  .navbar__arrow {
+    padding-top: 21px !important;
+  }
+}
+
+.chat-bubble {
+  position: relative;
+}
+
+.chat-bubble ::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #fdfdfd transparent transparent transparent;
+  border-radius: 5px;
+}
+
+.chat-bubble-user {
+  position: relative;
+}
+.chat-bubble-user ::after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -20px;
+  left: auto;
+  top: 0px;
+  bottom: auto;
+  border: 22px solid;
+  border-color: #4891ff transparent transparent transparent;
+  border-radius: 5px;
+}
